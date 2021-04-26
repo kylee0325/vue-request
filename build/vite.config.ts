@@ -1,5 +1,4 @@
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import { createVuePlugin } from 'vite-plugin-vue2';
 import path from 'path';
 import { defineConfig } from 'vite';
 
@@ -10,5 +9,5 @@ export default defineConfig({
       'vue-request': path.resolve(__dirname, '../src/index.ts'),
     },
   },
-  plugins: [vue(), vueJsx()],
+  plugins: [createVuePlugin()],
 });

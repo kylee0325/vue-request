@@ -1,5 +1,5 @@
 const presets = ['@babel/preset-env'];
-const plugins = ['@vue/babel-plugin-jsx'];
+const plugins = ['transform-vue-jsx'];
 
 if (process.env.NODE_ENV === 'test') {
   plugins.push('@babel/plugin-transform-runtime');

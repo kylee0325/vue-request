@@ -1,6 +1,6 @@
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
-import { computed, Ref, ref } from 'vue';
+import { computed, Ref, ref, watchEffect } from '@vue/composition-api';
 import { Config } from './config';
 import { Queries } from './useAsyncQuery';
 import limitTrigger from './utils/limitTrigger';

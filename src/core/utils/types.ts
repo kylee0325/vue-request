@@ -1,4 +1,4 @@
-import { Ref } from 'vue';
+import { Ref } from '@vue/composition-api';
 import { Query } from '../createQuery';
 
 export type PartialRecord<T> = {

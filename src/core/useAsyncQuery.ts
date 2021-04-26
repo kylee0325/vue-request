@@ -6,7 +6,7 @@ import {
   ref,
   watch,
   watchEffect,
-} from 'vue';
+} from '@vue/composition-api';
 import {
   BaseOptions,
   Config,
@@ -150,7 +150,7 @@ function useAsyncQuery<R, P extends unknown[], FR>(
   const latestQuery = computed(() => queries[latestQueriesKey.value] ?? {});
 
   // sync state
-  // TODO: 需要探索一下有没有更优的处理方法
+  // // TODO: 需要探索一下有没有更优的处理方法
   watchEffect(
     () => {
       loading.value = latestQuery.value.loading;
@@ -159,7 +159,7 @@ function useAsyncQuery<R, P extends unknown[], FR>(
       params.value = latestQuery.value.params;
     },
     {
-      flush: 'sync',
+      flush: 'pre',
     },
   );
 

@@ -1,6 +1,6 @@
 import { LoadMoreExtendsOption } from '../useLoadMore';
 import { PaginationExtendsOption } from '../usePagination';
-import { InjectionKey, Ref, WatchSource } from 'vue';
+import { InjectionKey, Ref, WatchSource } from '@vue/composition-api';
 import { State } from './createQuery';
 
 const GLOBAL_OPTIONS: GlobalOptions = {};

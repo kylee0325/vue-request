@@ -1,4 +1,4 @@
-import { unref } from 'vue';
+import { unref } from '@vue/composition-api';
 import { RefObject, UnRef } from './types';
 
 export const objectToString = Object.prototype.toString;

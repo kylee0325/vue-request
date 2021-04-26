@@ -1,4 +1,4 @@
-import { computed, inject, ref, Ref, watchEffect } from 'vue';
+import { computed, inject, ref, Ref, watchEffect } from '@vue/composition-api';
 import {
   BaseOptions,
   FormatOptions,
