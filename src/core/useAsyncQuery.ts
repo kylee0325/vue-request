@@ -1,5 +1,5 @@
-import type { Ref } from 'vue';
-import { computed, inject, onUnmounted, reactive, ref, watch } from 'vue';
+import type { Ref } from 'vue-demi';
+import { computed, inject, onUnmounted, reactive, ref, watch } from 'vue-demi';
 
 import { getGlobalOptions, GLOBAL_OPTIONS_PROVIDE_KEY } from './config';
 import createQuery from './createQuery';

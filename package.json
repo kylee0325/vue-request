@@ -1,6 +1,6 @@
 {
-  "name": "vue-request",
-  "version": "1.2.3",
+  "name": "vue-request-compatible",
+  "version": "0.1.0",
   "description": "Vue 3 composition API for data fetching, supports SWR, polling, error retry, cache request, pagination and other cool features.",
   "keywords": [
     "vue",
@@ -15,10 +15,10 @@
     "vue request"
   ],
   "homepage": "https://www.attojs.org",
-  "bugs": "https://github.com/attojs/vue-request/issues",
+  "bugs": "https://github.com/kylee0325/vue-request/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/attojs/vue-request.git"
+    "url": "https://github.com/kylee0325/vue-request.git"
   },
   "license": "MIT",
   "main": "dist/index.cjs.js",
@@ -33,7 +33,7 @@
     "dev": "yarn vite ./example",
     "clean": "rimraf dist/*",
     "test": "jest --coverage",
-    "publishing": "np",
+    "publishing": "np --any-branch",
     "changelog": "standard-version && standard-version -i CHANGELOG.zh-CN.md -o CHANGELOG.zh-CN.md",
     "release": "yarn build && yarn publishing",
     "lint": "eslint -c ./.eslintrc.js './{src,scripts,build}/**/*.{js,ts,tsx}'",
@@ -97,11 +97,20 @@
     "sort-package-json": "^1.50.0",
     "standard-version": "^9.1.1",
     "ts-jest": "^26.4.1",
-    "typescript": "^4.0.5",
+    "typescript": "^4.4.4",
     "vite": "^2.1.5",
     "vue": "^3.0.2"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "@vue/composition-api": "^1.0.0-rc.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "dependencies": {
+    "vue-demi": "^0.11.4"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   }
 }

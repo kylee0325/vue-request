@@ -163,6 +163,7 @@ describe('utils', () => {
     try {
       await requestProxy(failApi);
     } catch (error) {
+      // @ts-ignore
       expect(error.message).toBe('Not Found');
     }
   });
@@ -191,6 +192,7 @@ describe('utils', () => {
     try {
       warning('test', true);
     } catch (error) {
+      // @ts-ignore
       expect(error.message).toBe('Warning: [vue-request] test');
     }
   });

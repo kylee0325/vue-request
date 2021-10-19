@@ -29,6 +29,7 @@ const RollUpConfig = {
       plugins: [terser()],
       globals: {
         vue: 'Vue',
+        'vue-demi': 'VueDemi',
       },
     },
   ],
@@ -48,6 +49,6 @@ const RollUpConfig = {
       exclude: [/core-js/],
     }),
   ],
-  external: ['vue'],
+  external: ['vue', 'vue-demi'],
 };
 export default RollUpConfig;

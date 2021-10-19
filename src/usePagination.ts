@@ -1,5 +1,5 @@
-import type { Ref } from 'vue';
-import { computed, inject, ref } from 'vue';
+import type { Ref } from 'vue-demi';
+import { computed, inject, ref } from 'vue-demi';
 
 import { getGlobalOptions, GLOBAL_OPTIONS_PROVIDE_KEY } from './core/config';
 import type {

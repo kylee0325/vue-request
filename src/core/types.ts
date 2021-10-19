@@ -1,6 +1,6 @@
 /* istanbul ignore next */
 
-import type { Ref, WatchSource } from 'vue';
+import type { Ref, WatchSource } from 'vue-demi';
 
 import type { LoadMoreExtendsOption } from '../useLoadMore';
 import type { PaginationExtendsOption } from '../usePagination';

@@ -39,6 +39,7 @@ describe('generateService', () => {
     try {
       await service();
     } catch (error) {
+      // @ts-ignore
       expect(error.message).toBe('Not Found');
       fn();
     }
@@ -69,6 +70,7 @@ describe('generateService', () => {
     try {
       await service();
     } catch (error) {
+      // @ts-ignore
       expect(error.message).toBe('Warning: [vue-request] Unknown service type');
       fn();
     }
@@ -81,6 +83,7 @@ describe('generateService', () => {
       const service = generateService(unknownService as any);
       await service();
     } catch (error) {
+      // @ts-ignore
       expect(error.message).toBe('Warning: [vue-request] Unknown service type');
       fn();
     }

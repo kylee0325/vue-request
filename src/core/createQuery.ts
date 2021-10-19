@@ -1,5 +1,5 @@
-import type { Ref } from 'vue';
-import { computed, ref } from 'vue';
+import type { Ref } from 'vue-demi';
+import { computed, ref } from 'vue-demi';
 
 import type { Config, InnerQueryState, Mutate, Query, State } from './types';
 import {
