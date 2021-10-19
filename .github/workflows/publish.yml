@@ -25,6 +25,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # 打包编译
+      - name: Build
+        run: npm run build
+
       # NPM 包发布
       - name: Release NPM Package
         env:
