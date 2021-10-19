@@ -1,0 +1,32 @@
+name: vue-request-publish
+
+on:
+  push:
+    branches: [compatible]
+  pull_request:
+    branches: [compatible]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+
+      # 依赖安装
+      - name: Install Dependencies
+        run: npm install
+
+      # NPM 包发布
+      - name: Release NPM Package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
